@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bem-vindo | SSI Brasil</title>
+  <title>SSI Brasil | Soluções em Automação</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script>
     function toggleService(id) {
@@ -12,7 +13,99 @@
     }
   </script>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col font-sans">
-<!-- CONTEÚDO COMPLETO OMITIDO PARA EXEMPLO -->
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navegação -->
+  <nav class="bg-gray-800 px-6 py-4 flex justify-center space-x-6 text-sm text-gray-300">
+    <a href="#sobre" class="hover:text-cyan-400">Sobre Nós</a>
+    <a href="#servicos" class="hover:text-cyan-400">Serviços</a>
+    <a href="#clientes" class="hover:text-cyan-400">Clientes</a>
+    <a href="#parceiros" class="hover:text-cyan-400">Parceiros</a>
+    <a href="#orcamento" class="hover:text-cyan-400">Orçamento</a>
+  </nav>
+
+  <!-- Apresentação -->
+  <section class="text-center py-12 px-4">
+    <h1 class="text-4xl font-bold text-cyan-400 mb-4">Sejam Bem-vindos à SSI Brasil</h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto">Oferecemos soluções inteligentes e integradas em automação predial, controle de acesso, segurança eletrônica, sistemas HVAC e muito mais.</p>
+    <div class="mt-6 space-x-4">
+      <a href="https://wa.me/5511954897008" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded text-white">WhatsApp</a>
+      <a href="mailto:suporte.ssi.br@gmail.com" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded text-white">E-mail</a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold text-cyan-300 mb-4 text-center">Nossos Serviços</h2>
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+      <button onclick="toggleService('automacao')" class="bg-red-600 hover:bg-red-500 px-4 py-2 rounded">Automação</button>
+      <button onclick="toggleService('eletrica')" class="bg-yellow-600 hover:bg-yellow-500 px-4 py-2 rounded">Elétrica</button>
+      <button onclick="toggleService('hvac')" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded">HVAC</button>
+      <button onclick="toggleService('sdai')" class="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded">SDAI</button>
+      <button onclick="toggleService('acesso')" class="bg-pink-600 hover:bg-pink-500 px-4 py-2 rounded">Acesso</button>
+    </div>
+    <div id="automacao" class="service-content hidden text-left bg-gray-800 p-4 rounded shadow mb-4">
+      <h3 class="text-xl font-bold text-red-400 mb-2">Automação</h3>
+      <p>Soluções para automação de processos, equipamentos e ambientes, otimizando eficiência e segurança.</p>
+    </div>
+    <div id="eletrica" class="service-content hidden text-left bg-gray-800 p-4 rounded shadow mb-4">
+      <h3 class="text-xl font-bold text-yellow-400 mb-2">Elétrica</h3>
+      <p>Projetos e execuções de redes elétricas com qualidade e conformidade às normas técnicas.</p>
+    </div>
+    <div id="hvac" class="service-content hidden text-left bg-gray-800 p-4 rounded shadow mb-4">
+      <h3 class="text-xl font-bold text-green-400 mb-2">HVAC</h3>
+      <p>Instalações e manutenção de sistemas de climatização com foco em conforto e sustentabilidade.</p>
+    </div>
+    <div id="sdai" class="service-content hidden text-left bg-gray-800 p-4 rounded shadow mb-4">
+      <h3 class="text-xl font-bold text-purple-400 mb-2">SDAI</h3>
+      <p>Sistemas de Detecção e Alarme de Incêndio integrados com segurança predial.</p>
+    </div>
+    <div id="acesso" class="service-content hidden text-left bg-gray-800 p-4 rounded shadow mb-4">
+      <h3 class="text-xl font-bold text-pink-400 mb-2">Controle de Acesso</h3>
+      <p>Gestão de acessos com biometria, cartões, QR Code e monitoramento.</p>
+    </div>
+  </section>
+
+  <!-- Clientes -->
+  <section id="clientes" class="bg-gray-800 py-8">
+    <h2 class="text-2xl font-semibold text-cyan-300 text-center mb-4">Nossos Clientes</h2>
+    <div class="flex flex-wrap justify-center gap-6 px-4">
+      <a href="https://www.honeywell.com" target="_blank"><img src="honeywell.png" alt="Honeywell" class="h-20"></a>
+      <a href="https://www.se.com/br/" target="_blank"><img src="schineider.png" alt="Schneider" class="h-20"></a>
+      <a href="https://www.siemens.com/br/pt.html" target="_blank"><img src="simiens.png" alt="Siemens" class="h-20"></a>
+    </div>
+  </section>
+
+  <!-- Parceiros -->
+  <section id="parceiros" class="py-12 px-4">
+    <h2 class="text-2xl font-semibold text-cyan-300 text-center mb-6">Parceiros</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
+      <img src="honeywell.png" class="object-contain h-16">
+      <img src="schineider.png" class="object-contain h-16">
+      <img src="simiens.png" class="object-contain h-16">
+      <img src="honeywell.png" class="object-contain h-16">
+    </div>
+  </section>
+
+  <!-- Orçamento -->
+  <section id="orcamento" class="max-w-xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold text-cyan-300 text-center mb-4">Solicite um Orçamento</h2>
+    <form action="https://formspree.io/f/xzzgadpp" method="POST" class="space-y-4 bg-gray-800 p-6 rounded shadow">
+      <input name="nome" type="text" placeholder="Seu nome" class="w-full p-2 rounded bg-gray-700 text-white" required>
+      <input name="telefone" type="text" placeholder="Seu telefone" class="w-full p-2 rounded bg-gray-700 text-white" required>
+      <input name="email" type="email" placeholder="Seu e-mail" class="w-full p-2 rounded bg-gray-700 text-white" required>
+      <textarea name="mensagem" placeholder="Sua solicitação" rows="4" class="w-full p-2 rounded bg-gray-700 text-white" required></textarea>
+      <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-center text-sm text-gray-400 py-6 border-t border-gray-700">
+    <p>Rua Antonio Maciel de Oliveira, 330 – CEP 06757-030</p>
+    <p>WhatsApp: <a href="https://wa.me/5511954897008" class="text-green-400 hover:underline">(11) 95489-7008</a></p>
+    <p>Email: <a href="mailto:suporte.ssi.br@gmail.com" class="text-blue-400 hover:underline">suporte.ssi.br@gmail.com</a></p>
+    <p class="mt-2 text-xs text-gray-500">Todos os direitos reservados © SSI BRASIL SA</p>
+  </footer>
+
 </body>
 </html>
